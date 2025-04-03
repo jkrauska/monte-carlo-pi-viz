@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monte Carlo Pi Estimation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Estimating π with Monte Carlo Method</h1>
+        
+        <div class="simulation-container">
+            <div class="canvas-container">
+                <canvas id="simulationCanvas" width="400" height="400"></canvas>
+            </div>
+            
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h2>Statistics</h2>
+                    <p>Points inside circle: <span id="pointsInside">0</span></p>
+                    <p>Total points: <span id="totalPoints">0</span></p>
+                    <p>Estimated π: <span id="estimatedPi">0</span></p>
+                    <p>Actual π: <span id="actualPi">3.14159265359</span></p>
+                    <p>Error: <span id="error">0</span>%</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <button id="startBtn">Start</button>
+            <button id="stopBtn" disabled>Stop</button>
+            <button id="resetBtn">Reset</button>
+            
+            <div class="slider-container">
+                <label for="speedSlider">Speed:</label>
+                <input type="range" id="speedSlider" min="1" max="100" value="10">
+                <span id="speedValue">10 points/frame</span>
+            </div>
+        </div>
+        
+        <div class="explanation">
+            <h2>How it works</h2>
+            <p>
+                This simulation uses the Monte Carlo method to estimate the value of π (pi).
+            </p>
+            <p>
+                We have a unit square (1×1) with a quarter circle of radius 1 inscribed within it.
+                The area of the square is 1, and the area of the quarter circle is π/4.
+            </p>
+            <p>
+                By randomly placing points inside the square and counting how many fall inside the quarter circle,
+                we can estimate π as:
+            </p>
+            <p class="formula">
+                π ≈ 4 × (points inside circle / total points)
+            </p>
+            <p>
+                Points are colored blue if they're inside the circle and red if they're outside.
+                As more points are added, our estimation becomes more accurate.
+            </p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
