@@ -1,6 +1,6 @@
 # Monte Carlo Pi Estimation Visualization
 
-This project provides an interactive visualization of the Monte Carlo method for estimating the value of π (pi).
+This project provides an interactive visualization of the Monte Carlo method for estimating the value of π (pi) using the pythagoream theorem too.
 
 ![Monte Carlo Pi Estimation](screenshot.png)
 
